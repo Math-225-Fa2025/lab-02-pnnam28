@@ -230,6 +230,8 @@ plastic_waste %>%
          subtitle = "by continent") +
     theme_minimal()
 ```
+ANSWER: 
+- Based on the plot, I can tell that there is an uptrend from the population that live by the coastal and the amount of plastic waste. There are alot of on plastic waste from Africa shoreline, following up is from the Asia and North America. 
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards and review the md document on GitHub to make sure you're happy with the final state of your work.*
 
