@@ -1,7 +1,7 @@
 ---
 title: "Lab 02 - Global plastic waste"
-author: "Your Name"
-output: 
+author: "Nam Pham"
+output:  
   tufte::tufte_handout:
     latex_engine: xelatex
     highlight: pygments
@@ -110,6 +110,9 @@ You might consider doing some research on Trinidad and Tobago to see why plastic
 
 1.  Plot, using histograms, the distribution of plastic waste per capita faceted by continent. What can you say about how the continents compare to each other in terms of their plastic waste per capita?
 
+ANSWERS:
+- So far, top 3 continents are Europe, North America and Asia has the highest count of plastic waste per capital. South America has the least plastic waste.
+
 ```{marginfigure}
 **NOTE:** From this point onwards the plots and the output of the code are not displayed in the lab instructions, but you can and should type the code and view the results yourself.
 ```
@@ -156,8 +159,17 @@ ggplot(data = plastic_waste,
 This still doesn't look great...
 
 1.  Recreate the density plots above using a different (lower) alpha level that works better for displaying the density curves for all continents.
+ANSWER: 
+ggplot(data = plastic_waste, 
++        mapping = aes(x = plastic_waste_per_cap, 
++                      color = continent, 
++                      fill = continent)) +
++   geom_density(alpha = 0.35)
+
 
 2.  Describe why we defined the `color` and `fill` of the curves by mapping aesthetics of the plot but we defined the `alpha` level as a characteristic of the plotting geom.
+ANSWER:
+- because we want the transparency happened equally throughout the geom and not based on the variables of the dataset. Hence, if we defined alpha in the mapping aesthetics it will be based on a variables so that the transparency will not be equal. 
 
 🧶 ✅ ⬆️ *Now is a good time to knit your document and commit and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
